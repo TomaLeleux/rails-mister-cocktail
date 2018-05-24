@@ -1,0 +1,14 @@
+<h1>List of cocktails</h1>
+
+<%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary" %>
+
+<% @cocktails.each do |cocktail| %>
+  <%= link_to cocktail_path(cocktail) do %>
+    <div class="product">
+      <img src="https://loremflickr.com/320/240/drink" alt="drink" class="product-image hidden-xs">
+      <div class='product-body'>
+        <h3><%= cocktail.name %></h3>
+      </div>
+    </div>
+  <% end %>
+<% end %>
