@@ -2,13 +2,19 @@
 
 <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary" %>
 
-<% @cocktails.each do |cocktail| %>
-  <%= link_to cocktail_path(cocktail) do %>
-    <div class="product">
-      <img src="https://loremflickr.com/320/240/drink" alt="drink" class="product-image hidden-xs">
-      <div class='product-body'>
-        <h3><%= cocktail.name %></h3>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+        <%= link_to cocktail_path(cocktail) do %>
+          <div class="card-description">
+            <h2><%= cocktail.name %></h2>
+          </div>
+          <%= image_tag "https://loremflickr.com/320/240/drink", alt: "Le Wagon", width: 200, class: "product-image hidden-xs" %>
+        <% end %>
       </div>
-    </div>
-  <% end %>
-<% end %>
+    <% end %>
+  </div>
+</div>
+
+

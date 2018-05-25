@@ -1,4 +1,7 @@
-<h1>Doses#new</h1>
-<p>Find me in app/views/doses/new.html.erb</p>
+<h1>Add dose</h1>
 
 <%= render 'form', dose: @dose %>
+
+<i class="fa fa-undo" aria-hidden="true">
+  <%= link_to "Back to the list", cocktails_path, class: "link" %>
+</i>

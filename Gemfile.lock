@@ -71,6 +71,8 @@ GEM
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.23)
+    figaro (1.1.1)
+      thor (~> 0.14)
     font-awesome-sass (5.0.13)
       sassc (>= 1.11)
     globalid (0.4.1)
@@ -235,9 +237,10 @@ DEPENDENCIES
   annotate
   autoprefixer-rails
   bootsnap (>= 1.1.0)
-  bootstrap-sass
+  bootstrap-sass (~> 3.3.7)
   byebug
   coffee-rails (~> 4.2)
+  figaro
   font-awesome-sass (~> 5.0.9)
   jbuilder (~> 2.5)
   jquery-rails
