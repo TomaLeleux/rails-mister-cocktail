@@ -17,12 +17,14 @@ ingredients["drinks"].each do |ingredient|
   ingredient.save!
 end
 
-(1..20000).each do |i|
-  response = RestClient.get "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=#{i}"
-  ingredients = JSON.parse(response)
+(11000..20000).each do |j|
+  response = RestClient.get "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=#{j}"
+  cocktails = JSON.parse(response)
 
-  cocktails["drinks"].each do |cocktail|
-    cocktail = Cocktail.new(name: cocktail["strDrink"])
-    ingredient.save!
+  if cocktails["drinks"]
+    cocktails["drinks"].each do |item|
+      cocktail = Cocktail.new(name: item["strDrink"])
+      cocktail.save!
+    end
   end
 end

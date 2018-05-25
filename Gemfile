@@ -37,6 +37,8 @@ gem 'autoprefixer-rails'
 gem 'jquery-rails' # Add this line if you use Rails 5.1
 gem 'annotate'
 gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
