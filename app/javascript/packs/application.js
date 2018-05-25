@@ -9,5 +9,4 @@
 
 // app/javascript/packs/application.js
 import { loadDynamicBannerText } from '../components/banner';
-import '../components/select2';
 loadDynamicBannerText();
