@@ -10,7 +10,8 @@
           <div class="card-description">
             <h2><%= cocktail.name %></h2>
           </div>
-          <%= image_tag "https://loremflickr.com/320/240/drink", alt: "Le Wagon", width: 200, class: "product-image hidden-xs" %>
+          <%= image = cocktail.name.tr(' ','_') %>
+          <%= cl_image_tag "#{image}.jpg", height: 300, width: 400, crop: :fill %>
         <% end %>
       </div>
     <% end %>

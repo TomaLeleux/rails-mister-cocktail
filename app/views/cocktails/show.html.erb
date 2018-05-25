@@ -1,7 +1,8 @@
 <h1 class="text-center"><%= @cocktail.name %></h1>
 
 <div class="card">
-  <img class="card-img-top" src="https://loremflickr.com/320/240/drink" alt="Image">
+  <%= image = @cocktail.name.tr(' ','_') %>
+  <%= cl_image_tag "#{image}.jpg", height: 300, width: 400, crop: :fill, class: "card-img-top" %>
   <div class="card-body">
     <h4 class="card-title"><%= @cocktail.name %></h4>
     <ul>

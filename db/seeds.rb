@@ -23,7 +23,10 @@ end
 
   if cocktails["drinks"]
     cocktails["drinks"].each do |item|
-      cocktail = Cocktail.new(name: item["strDrink"])
+      cocktail_name = item["strDrink"]
+      image_name = "#{cocktail_name}.jpg"
+      puts image_name
+      cocktail = Cocktail.new(name: cocktail_name, photo: image_name)
       cocktail.save!
     end
   end
