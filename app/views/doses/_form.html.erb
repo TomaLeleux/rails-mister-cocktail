@@ -1,9 +1,9 @@
-<h1>Add a dose for <strong><%= @cocktail.name %></strong></h1>
+<h3>Add a dose for <strong><%= @cocktail.name %></strong></h3>
 
-<div class="dose_form">
-  <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <%= f.input :description %>
-    <%= f.association :ingredient, allow_blank: :false %>
+<div class="form-inputs">
+  <%= simple_form_for [@cocktail, @dose], :html => { :class => 'form-horizontal' } do |f| %>
+    <%= f.input :description, class: "form-control" %>
+    <%= f.association :ingredient, class: "form-control select2" %>
     <%= f.submit "Add a dose", class: "btn btn-primary"%>
   <% end %>
 </div>

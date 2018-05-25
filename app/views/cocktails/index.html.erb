@@ -19,7 +19,7 @@
         <%= link_to cocktail_path(cocktail) do %>
           <% image = cocktail.name.tr(' ','_') + ".jpg" %>
           <div class="card text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path image, height: 300, width: 400, crop: :fill %>')">
+         url('<%= cl_image_path image, height: 700, width: 900, crop: :fill %>')">
             <div class="card-description">
               <h2><%= cocktail.name %></h2>
             </div>

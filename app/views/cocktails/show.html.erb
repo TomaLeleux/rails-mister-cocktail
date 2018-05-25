@@ -1,25 +1,12 @@
-<h1 class="text-center"><%= @cocktail.name %></h1>
-
-<div class="card">
-  <%= image = @cocktail.name.tr(' ','_') %>
-  <%= cl_image_tag "#{image}.jpg", height: 300, width: 400, crop: :fill, class: "card-img-top" %>
-  <div class="card-body">
-    <h4 class="card-title"><%= @cocktail.name %></h4>
-    <ul>
-      <% @doses.each do |dose| %>
-        <li>
-          <%= "#{dose.description} #{dose.ingredient.name}" %>
-          <%= link_to '<i class="fa fa-trash"></i>'.html_safe, dose_path(dose.id),
-            method: :delete,
-            data: { confirm: "Delete #{dose.ingredient.name}?" } %>
-        </li>
-      <% end %>
-    </ul>
+<% image = @cocktail.name.tr(' ','_') + ".jpg" %>
+<div class="card_show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path image, height: 300, width: 400, crop: :fill %>')">
+  <div class="card-category"><%= @cocktail.name %></div>
+  <div class="card-description">
   </div>
-
 </div>
 
-<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
+<%= render 'doses/form', dose: @dose %>
 
 <hr>
 
