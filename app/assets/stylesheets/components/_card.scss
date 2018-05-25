@@ -20,6 +20,8 @@
   height: 200px;
   margin: 15px 10px;
   letter-spacing: 1px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px black;
 }
 .card-user {
   position: absolute;
@@ -43,6 +45,7 @@
 .card-description h2 {
   font-size: 20px;
   padding: 0px 20px;
+  margin: 10px 10px;
 }
 .card-description p {
   font-size: 14px;
