@@ -1,10 +1,25 @@
 .card {
-  height: 175px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background-size: cover !important;
+  // height: 175px;
+  // text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  // background-size: cover !important;
+  // background-position: center;
+  // color: white;
+  // position: relative;
+  background-size: 100% 100%;
   background-position: center;
+  background-repeat: no-repeat;
   color: white;
-  position: relative;
+  font-size: 100%;
+  text-shadow: 2px 2px 3px black;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  height: 200px;
+  margin: 15px 10px;
+  letter-spacing: 1px;
 }
 .card-user {
   position: absolute;
@@ -26,7 +41,8 @@
   left: 10px;
 }
 .card-description h2 {
-  font-size: 24px;
+  font-size: 20px;
+  padding: 0px 20px;
 }
 .card-description p {
   font-size: 14px;
@@ -53,4 +69,14 @@
   font-size: 14px;
   margin: 0px;
   padding: 0px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card a{
+  color: white;
+  padding: auto auto;
 }
